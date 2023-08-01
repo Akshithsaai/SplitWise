@@ -1,24 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import { Fragment, useState } from 'react';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ToastContainer } from 'material-react-toastify';
+import AppRoutes from './routes/AppRoutes';
+import "material-react-toastify/dist/ReactToastify.css";
+import { CssBaseline, Switch } from '@mui/material';
 
 function App() {
+
+    // const [theme,setTheme] = useState(true);
+    // const currentTheme = createTheme({
+    //   palette:{
+    //     mode:theme?'dark':'light',
+    //   }
+    // });
+    // const handleChange = (event) => {
+    //   setTheme(event.target.checked);
+    // }
+  const theme = createTheme();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline/>
+      <ToastContainer />
+      <AppRoutes />
+      {/*<Switch checked={theme} onChange={handleChange} color="default"/>*/}
+    </ThemeProvider>
   );
 }
 
