@@ -15,7 +15,7 @@ import { addExpenseRequest } from '../../../services/group'
 import { toast } from 'material-react-toastify'
 
 function AddExpenseDialog(props) {
-    
+  const currentUserId = localStorage.getItem("id");
   const { 
     isExpenseDialogOpen, 
     setIsExpenseDialogOpen, 
@@ -160,7 +160,7 @@ function AddExpenseDialog(props) {
                 helpertext={errorDetails.paidBy}
               >
                 {userDetails.map(user => (
-                  <MenuItem key={user.id} value={user.id}>{user.name}</MenuItem>
+                  <MenuItem key={user.id} value={user.id}>{(user.id===currentUserId)?"You":user.name}</MenuItem>
                 ))}
               </Select>
             </FormControl>

@@ -123,7 +123,7 @@ function Friend(props) {
           }
           else{
             expenses.map(expense => {
-                if(expense.userId === userId){
+                if(expense.paidBy === userId){
                     expense.paidBy = "You lent " + (expense.amount)/2;
                 }
                 else{
@@ -136,7 +136,6 @@ function Friend(props) {
                 expense.createdOn = day+"-"+month+"-"+year;
             })
           }
-          console.log(expenses);
           setExpenses(expenses);
       })
     }

@@ -6,7 +6,7 @@ import { toast } from 'material-react-toastify';
 
 
 const axiosConfig = {
-  baseURL: `http://localhost:8000`,
+  baseURL: `${process.env.REACT_APP_SERVER_PROTOCOL}${process.env.REACT_APP_BACKEND_URL}`,
   timeout: 300000,
 };
 

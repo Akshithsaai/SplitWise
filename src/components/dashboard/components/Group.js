@@ -17,6 +17,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 function Group(props) {
     const colorArray = props.colors;
+    const currentUserId = localStorage.getItem("id");
     
     const [createGroupDialog, setCreateGroupDialog] = useState(false)
     const [groupNames,setGroupNames] = useState([]);
@@ -131,7 +132,6 @@ function Group(props) {
             users: res.data.users
           }
           setGroupDetails(details);
-          console.log(groupDetails)
       })
     }
     let count = 0;
@@ -224,7 +224,7 @@ function Group(props) {
             <DialogContent>
             <Grid container spacing={1}>
               {userDetails.map((user)=>(
-                <Grid item key={user.id} xs={12}>{user.name}</Grid>
+                <Grid item key={user.id} xs={12}>{(user.id===currentUserId)?"You":user.name}</Grid>
               ))
               }
             </Grid>

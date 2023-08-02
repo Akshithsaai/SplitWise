@@ -25,7 +25,7 @@ function Menubar(props) {
     alignItems="center"
     flexDirection="column"
     columnGap="20px"
-    width="150px"
+    width="200px"
     height="100vh"
     >
         <Box 
