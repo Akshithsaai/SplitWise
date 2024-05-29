@@ -128,11 +128,10 @@ function SignUp() {
         flexDirection="column"
         width="300px"
       >
-<<<<<<< HEAD
+ 
       <Box><Typography my={"10px"} fontWeight={"400px"} fontSize={"20px"}>SplitWise</Typography></Box>
 
-=======
->>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
+
         <TextField
           variant="outlined"
           label="Full Name"

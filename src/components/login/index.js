@@ -7,10 +7,9 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { userAuthLoginRequest } from "../../services/user"
 import { toast } from "material-react-toastify"
-<<<<<<< HEAD
+ 
 import { Divider } from "@mui/material"
-=======
->>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
+  
 
 function Login() {
   const [details, setDetails] = useState({
@@ -81,11 +80,10 @@ function Login() {
       justifyContent="center"
       height="100vh"
     >
-<<<<<<< HEAD
+ 
       <Box><Typography my={"10px"} fontWeight={"400px"} fontSize={"20px"}>SplitWise</Typography></Box>
-=======
-      <Box><Typography>SplitWise</Typography></Box>
->>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
+  
+     
       <Box
         display="flex"
         alignItems="center"
