@@ -1,7 +1,11 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { getGroupsByIdRequest } from '../../../services/user'
 import { getGroupExpensesByIdRequest, getGroupNameByIdRequest } from '../../../services/group';
+<<<<<<< HEAD
 import { Avatar, Box, Button, Card, Dialog, DialogContent, DialogTitle, Grid, Stack, Typography, capitalize } from '@mui/material';
+=======
+import { Avatar, Box, Button, Card, Dialog, DialogContent, DialogTitle, Grid, Stack, Typography } from '@mui/material';
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
 import CreateGroup from './CreateGroupDialog';
 import { toast } from 'material-react-toastify';
 import Paper from '@mui/material/Paper';
@@ -90,7 +94,15 @@ function Group(props) {
       setRowsPerPage(+event.target.value);
       setPage(0);
     };
+<<<<<<< HEAD
     
+=======
+
+    // function handleAboutGroup(group){
+    //   setAboutGroup(true);
+    // }
+
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
     function getExpenses(group){
       setSelectedGroup(group)
       getGroupExpensesByIdRequest(group.id)
@@ -118,7 +130,11 @@ function Group(props) {
               }
               const date = new Date(expense.createdOn)
               const year = date.getFullYear();
+<<<<<<< HEAD
               const month = date.getMonth()+1;
+=======
+              const month = date.getMonth();
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
               const day = date.getDate();
               expense.createdOn = day+"-"+month+"-"+year
             })
@@ -127,7 +143,10 @@ function Group(props) {
             expenses: expenses,
             users: res.data.users
           }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
           setGroupDetails(details);
       })
     }
@@ -241,7 +260,11 @@ function Group(props) {
                       align={column.align}
                       style={{ minWidth: column.minWidth }}
                     >
+<<<<<<< HEAD
                       {capitalize(column.label)}
+=======
+                      {column.label}
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
                     </TableCell>
                   ))}
                 </TableRow>

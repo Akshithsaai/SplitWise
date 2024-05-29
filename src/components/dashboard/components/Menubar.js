@@ -32,9 +32,15 @@ function Menubar(props) {
         marginTop="10px" 
         height="5vh" 
         sx={{cursor:"pointer"}}
+<<<<<<< HEAD
         onClick={()=>{handleSelectedTab("Home");navigate('/dashboard')}}
         >
         <Typography>EasySplit</Typography>
+=======
+        onClick={()=>{navigate('/dashboard')}}
+        >
+        <Typography>SplitWise</Typography>
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
         </Box>
         <IconButton 
             sx={{borderRadius: "0", width: "100%"}}

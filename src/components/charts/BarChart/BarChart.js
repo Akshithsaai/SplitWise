@@ -8,8 +8,8 @@ const chartSetting = {
       label: 'Expenses',
     },
   ],
-  width: 700,
-  height: 500,
+  width: 650,
+  height: 450,
 };
 
 let dataset = [
@@ -73,7 +73,7 @@ export default function HorizontalBars({dataset}) {
       setData(dataset);
     }, [dataset]);
   return (
-    <BarChart
+    <BarChart 
       dataset={dataset}
       yAxis={[{ scaleType: 'band', dataKey: 'month' }]}
       series={[{ dataKey: 'expense', label: 'Expenses', valueFormatter }]}

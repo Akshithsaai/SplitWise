@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 import { Box, Card, CardContent, Typography } from '@mui/material'
+=======
+import { Box, Button, Card, CardContent, Typography } from '@mui/material'
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
 import React, { useEffect, useState } from 'react'
 import CreateGroup from './CreateGroupDialog'
 import { getGroupExpensesByIdRequest } from '../../../services/group';
 import { getGroupsByIdRequest } from '../../../services/user';
 import { getFriendExpensesByIdRequest, getFriendsRequest } from '../../../services/friend';
+<<<<<<< HEAD
 import BarChart from '../../charts/BarChart/BarChart';
 
 function Home() {
@@ -57,15 +62,25 @@ let dataset = [
       month: 'Dec',
     },
   ];
+=======
+import { green } from '@mui/material/colors';
+
+function Home() {
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
   const [createGroupDialog, setCreateGroupDialog] = useState(false)
   const [totalExpenses,setTotalExpenses] = useState(0);
   const [totalGroups,setTotalGroups] = useState(0);
   const [totalFriends,setTotalFriends] = useState(0);
   const [totalLentAmount,setTotalLentAmount] = useState(0);
+<<<<<<< HEAD
   const [monthlyData,setMonthlyData] = useState(dataset);
 
   
   const currentUserId = localStorage.getItem("id"); 
+=======
+  
+  const currentUserId = localStorage.getItem("id");
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
   useEffect(()=>{
     const promises = [];
     promises.push(getFriendsRequest(currentUserId)
@@ -84,10 +99,13 @@ let dataset = [
           let value = 0;
           res.data.expenses.map((expense)=>{
             value+= expense.amount / 2;
+<<<<<<< HEAD
             const date = new Date(expense.createdOn);
             const month = date.getMonth()+1;
             dataset[month-1].expense+=(expense.amount / 2);
             setMonthlyData(dataset);
+=======
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
           });
           return value;
         })
@@ -111,10 +129,13 @@ let dataset = [
           let value = 0;
           res.data.expenses.map((expense) => {
             value += expense.amount / numberOfUsers;
+<<<<<<< HEAD
             const date = new Date(expense.createdOn);
             const month = date.getMonth()+1;
             dataset[month-1].expense+=(expense.amount / numberOfUsers);
             setMonthlyData(dataset);
+=======
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
           });
           return value;
         })
@@ -191,10 +212,13 @@ let dataset = [
       setTotalLentAmount(totalLentAmount);
     })
   },[])
+<<<<<<< HEAD
 
 
   // console.log(monthlyData);
   // monthlyData.map(m=>console.log(m));
+=======
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
   return (
     <Box 
     display='flex'
@@ -203,7 +227,10 @@ let dataset = [
     {/*<Button variant='contained' sx={{m:"10px"}}>
         Create Group
   </Button>*/}
+<<<<<<< HEAD
     <div>
+=======
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
       <Card
       sx={{
         display:"flex",
@@ -280,6 +307,7 @@ let dataset = [
       </CardContent>
       
       </Card>
+<<<<<<< HEAD
     </div>
       <div >
       <BarChart sx={{display:'flex'}} dataset={monthlyData}/>
@@ -288,6 +316,9 @@ let dataset = [
       
     </Box>
 
+=======
+    </Box>
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
   )
 }
 

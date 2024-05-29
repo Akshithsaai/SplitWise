@@ -8,16 +8,24 @@
     "@mui/icons-material": "^5.14.1",
     "@mui/lab": "^5.0.0-alpha.137",
     "@mui/material": "^5.14.1",
+<<<<<<< HEAD
     "@mui/x-charts": "^7.5.1",
+=======
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+<<<<<<< HEAD
     "chart.js": "^4.4.0",
     "material-react-toastify": "^1.0.1",
     "node-modules": "^1.0.1",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
+=======
+    "material-react-toastify": "^1.0.1",
+    "react": "^18.2.0",
+>>>>>>> 30e21af59f7b49e7821a51c18477d54bec60bd35
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2",
     "react-scripts": "5.0.1",
