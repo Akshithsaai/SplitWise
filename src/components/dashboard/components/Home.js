@@ -6,7 +6,7 @@ import { getGroupExpensesByIdRequest } from '../../../services/group';
 import { getGroupsByIdRequest } from '../../../services/user';
 import { getFriendExpensesByIdRequest, getFriendsRequest } from '../../../services/friend';
 import BarChart from '../../charts/BarChart/BarChart';
-import { green } from '@mui/material/colors';
+// import { green } from '@mui/material/colors';
 function Home()
 {
 let dataset = [
@@ -59,9 +59,6 @@ let dataset = [
       month: 'Dec',
     },
   ];
-
-
-function Home() {
 
   const [createGroupDialog, setCreateGroupDialog] = useState(false)
   const [totalExpenses,setTotalExpenses] = useState(0);
@@ -299,6 +296,6 @@ function Home() {
 
   )
 }
-}
+
 
 export default Home
