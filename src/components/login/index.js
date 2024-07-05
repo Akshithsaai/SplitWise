@@ -29,7 +29,7 @@ function Login() {
     const value = e.target.value;
     setDetails(prev => ({...prev, [name]: value}));
   }
-
+  
   function handleLogin() {
     const errors = {
       emailAddress: "",
@@ -81,7 +81,7 @@ function Login() {
       height="100vh"
     >
  
-      <Box><Typography my={"10px"} fontWeight={"400px"} fontSize={"20px"}>SplitWise</Typography></Box>
+      <Box><Typography my={"10px"} fontWeight={"400px"} fontSize={"20px"}>EasySplit</Typography></Box>
   
      
       <Box

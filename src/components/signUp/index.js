@@ -129,7 +129,7 @@ function SignUp() {
         width="300px"
       >
  
-      <Box><Typography my={"10px"} fontWeight={"400px"} fontSize={"20px"}>SplitWise</Typography></Box>
+      <Box><Typography my={"10px"} fontWeight={"400px"} fontSize={"20px"}>EasySplit</Typography></Box>
 
 
         <TextField
